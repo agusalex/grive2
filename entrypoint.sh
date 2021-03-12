@@ -39,4 +39,6 @@ else
         fi
     fi
 fi
-chmod 777 -R /drive
+if [ ! -z "${PERM}" ]; then
+  chmod ${PERM} -R /drive
+fi
