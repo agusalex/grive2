@@ -12,4 +12,6 @@ if [ ! -f "$FILE" ]; then
 else
    echo "Lock-file present $FILE, try increasing time between runs, next schedule will be $CRON"
 fi
-chmod 777 -R /drive
+if [ ! -z "${PERM}" ]; then
+  chmod ${PERM} -R /drive
+fi

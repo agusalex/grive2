@@ -22,6 +22,7 @@ Docker Container for [grive2](https://github.com/vitalif/grive2) by **vitalif**
 |**SECRET**  | Your Google Secret |
 |**CODE**  | Your Google Code |
 |**CRON**  | [Cron Schedule](https://crontab.guru/) |
+|**PERM**  |  [Unix Permissions](https://chmod-calculator.com/) to set on all files in folder   |
 
 # Google Drive Setup
 - Go to https://console.developers.google.com/apis/library. 
