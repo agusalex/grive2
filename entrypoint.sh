@@ -39,3 +39,4 @@ else
         fi
     fi
 fi
+chmod 777 -R /drive

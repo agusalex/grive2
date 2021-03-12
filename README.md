@@ -18,9 +18,9 @@ Docker Container for [grive2](https://github.com/vitalif/grive2) by **vitalif**
 | Variable |Description  |
 |--|--|
 |**PARAMS**  | Passes the parameters to **grive2**. see **Grive Settings** bellow |
-|**CLIENT_ID**  | Your Google Client ID |
+|**ID**  | Your Google Client ID |
 |**SECRET**  | Your Google Secret |
-|**SECRET**  | Your Google Code |
+|**CODE**  | Your Google Code |
 |**CRON**  | [Cron Schedule](https://crontab.guru/) |
 
 # Google Drive Setup
@@ -29,7 +29,7 @@ Docker Container for [grive2](https://github.com/vitalif/grive2) by **vitalif**
 - Search for Google Drive API and enable it.
 - Go to API Credentials page (https://console.developers.google.com/apis/credentials)
 - Create a new OAuth Client credential. Select TV as device type. You will be provided with a id and a secret. 
-- Save both **CLIENT_ID** and **SECRET** because you're going to need it for grive2.
+- Save both **ID** and **SECRET** because you're going to need it for grive2.
 
 # Running
 - Run this container  with these **ENV** options : 
@@ -51,7 +51,7 @@ docker run -it -e ID=CLIENT_ID -e SECRET=SECRET -e CODE=CODE -v /your/host/folde
 ```
 
 
-You can always grab your response code by appending your **CLIENT_ID** to this URL:
+You can always grab your response code by appending your **ID** to this URL:
 
 https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id= **FILL_HERE_YOUR_CLIENT_ID**
 
@@ -60,7 +60,7 @@ https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com
 
 For setting your own Grive configs for example syncing only one folder with **-s** you may use the PARAMS environmental variable as so:
 ```
-docker run -it -e PARAMS="--path folder --force" agusalex/grive2 
+docker run -it -v /your/host/folder:/drive -e PARAMS="-s folder_name" agusalex/grive2 
 ```
 
 | Parameter| Description |

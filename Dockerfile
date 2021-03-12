@@ -23,7 +23,7 @@ RUN mkdir /drive \
 COPY --from=build /usr/local/bin/grive /bin/grive
 COPY ./entrypoint.sh /root/entrypoint.sh 
 COPY ./run.sh /root/run.sh  
-RUN chmod 777 /root/entrypoint.sh /root/run.sh /bin/dumb-init /bin/grive /drive
+RUN chmod 777 /root/entrypoint.sh /root/run.sh /bin/dumb-init /bin/grive
 VOLUME /drive
 WORKDIR /drive
 ENTRYPOINT ["dumb-init", "--"]
