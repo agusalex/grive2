@@ -54,7 +54,7 @@ docker run -it -e ID=CLIENT_ID -e SECRET=SECRET -e CODE=CODE -v /your/host/folde
 
 You can always grab your response code by appending your **ID** to this URL:
 
-https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id= **FILL_HERE_YOUR_CLIENT_ID**
+https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fdrive&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=**FILL_HERE_YOUR_CLIENT_ID**
 
 
 # Grive Settings
